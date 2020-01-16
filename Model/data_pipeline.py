@@ -25,7 +25,7 @@ class DataPipeline:
         # Load in the csv 
         csv_path = os.path.join(data_path, "new-york-city-airbnb")
         csv = os.path.join(csv_path, "AB_NYC_2019.csv")
-        # Only use first 10 columns of data
+        # Only use specific columns of data
         columns = [1, 2, 3, 4, 5, 8, 9]
 
         return pd.read_csv(csv, skipinitialspace=True, usecols=columns)
@@ -99,5 +99,5 @@ print(data.iloc[0])
 print(data.iloc[21527])
 print(data.iloc[16485])
 
-# *** THIS IS WHERE I AM. I need to checkout the predictions to see how accurate they are. Probably need to modify what attributes are being trained 
-# ... (need to probably remove most features I am currently using and just keep super relevant ones)
+# *** To Do: Checkout the predictions to see how accurate they are. Probably need to modify what attributes are being trained 
+# *** Update: Will need to remove a few features that I am currently using
